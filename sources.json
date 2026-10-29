@@ -1,0 +1,159 @@
+{
+  "checked_on": "2026-10-29",
+  "author": "DDing-Ho",
+  "sources": [
+    {
+      "week": "01",
+      "repository": "DDing-Ho/KraftonJungle3_Week1_Team5",
+      "url": "https://github.com/DDing-Ho/KraftonJungle3_Week1_Team5",
+      "visibility": "private",
+      "ref": "main",
+      "commit": "8e5ebb8cb3e98170922b99f96c7e767c6bc21c83",
+      "commit_url": "https://github.com/DDing-Ho/KraftonJungle3_Week1_Team5/commit/8e5ebb8cb3e98170922b99f96c7e767c6bc21c83"
+    },
+    {
+      "week": "02",
+      "repository": "DDing-Ho/Jungle3_Week2_Team1",
+      "url": "https://github.com/DDing-Ho/Jungle3_Week2_Team1",
+      "visibility": "public",
+      "ref": "main",
+      "commit": "7dc690cf0ff416596955a6c1b1be4ae1f75c9903",
+      "commit_url": "https://github.com/DDing-Ho/Jungle3_Week2_Team1/commit/7dc690cf0ff416596955a6c1b1be4ae1f75c9903"
+    },
+    {
+      "week": "03",
+      "repository": "DDing-Ho/KraftonJungle3_Week3_Team2",
+      "url": "https://github.com/DDing-Ho/KraftonJungle3_Week3_Team2",
+      "visibility": "public",
+      "ref": "main",
+      "commit": "a587fc19e11341b3ee1509e7d3a408ded82f8f7e",
+      "commit_url": "https://github.com/DDing-Ho/KraftonJungle3_Week3_Team2/commit/a587fc19e11341b3ee1509e7d3a408ded82f8f7e"
+    },
+    {
+      "week": "04",
+      "repository": "DDing-Ho/KraftonJungle3_Week4_Team6",
+      "url": "https://github.com/DDing-Ho/KraftonJungle3_Week4_Team6",
+      "visibility": "public",
+      "ref": "main",
+      "commit": "cc564c2c41005b46ad24c1e5ea04d63f54b3cad9",
+      "commit_url": "https://github.com/DDing-Ho/KraftonJungle3_Week4_Team6/commit/cc564c2c41005b46ad24c1e5ea04d63f54b3cad9"
+    },
+    {
+      "week": "05",
+      "repository": "DDing-Ho/W05_Team8",
+      "url": "https://github.com/DDing-Ho/W05_Team8",
+      "visibility": "private",
+      "ref": "main",
+      "commit": "85301116e1574100962866580593088ecda1a29e",
+      "commit_url": "https://github.com/DDing-Ho/W05_Team8/commit/85301116e1574100962866580593088ecda1a29e"
+    },
+    {
+      "week": "05-plus",
+      "repository": "CaptainTangerine/KraftonJungle3_Week5Plus_Team8",
+      "url": "https://github.com/CaptainTangerine/KraftonJungle3_Week5Plus_Team8",
+      "visibility": "public",
+      "ref": "main",
+      "commit": "62a7cb9f18c30237ebba45adb63baec431f09e99",
+      "commit_url": "https://github.com/CaptainTangerine/KraftonJungle3_Week5Plus_Team8/commit/62a7cb9f18c30237ebba45adb63baec431f09e99"
+    },
+    {
+      "week": "05-plus",
+      "repository": "mathison0/Jungle_Week5plus_Team8",
+      "url": "https://github.com/mathison0/Jungle_Week5plus_Team8",
+      "visibility": "private",
+      "ref": "main",
+      "commit": "810118fe784f3576f754f65ee430e83f9c4a77e6",
+      "commit_url": "https://github.com/mathison0/Jungle_Week5plus_Team8/commit/810118fe784f3576f754f65ee430e83f9c4a77e6"
+    },
+    {
+      "week": "06",
+      "repository": "esc10946/Jungle_Week6_Team6",
+      "url": "https://github.com/esc10946/Jungle_Week6_Team6",
+      "visibility": "public",
+      "ref": "main",
+      "commit": "4285aef390ae572bfa2433b92a039ee4ef13b397",
+      "commit_url": "https://github.com/esc10946/Jungle_Week6_Team6/commit/4285aef390ae572bfa2433b92a039ee4ef13b397"
+    },
+    {
+      "week": "07",
+      "repository": "jskim-research/Jungle_Week7_Team4",
+      "url": "https://github.com/jskim-research/Jungle_Week7_Team4",
+      "visibility": "public",
+      "ref": "main",
+      "commit": "b0768887dd289b005042df80afeacb7e2a0b7d63",
+      "commit_url": "https://github.com/jskim-research/Jungle_Week7_Team4/commit/b0768887dd289b005042df80afeacb7e2a0b7d63"
+    },
+    {
+      "week": "08",
+      "repository": "DDing-Ho/Jungle_Week8_Team8",
+      "url": "https://github.com/DDing-Ho/Jungle_Week8_Team8",
+      "visibility": "public",
+      "ref": "main",
+      "commit": "df26cc90045251698b397f987599323dd2d38c79",
+      "commit_url": "https://github.com/DDing-Ho/Jungle_Week8_Team8/commit/df26cc90045251698b397f987599323dd2d38c79"
+    },
+    {
+      "week": "09",
+      "repository": "chodott/Jungle_Week9_Team2",
+      "url": "https://github.com/chodott/Jungle_Week9_Team2",
+      "visibility": "public",
+      "ref": "main",
+      "commit": "a5aeee8d58b47a3efc69bb75541ad666a2f74990",
+      "commit_url": "https://github.com/chodott/Jungle_Week9_Team2/commit/a5aeee8d58b47a3efc69bb75541ad666a2f74990"
+    },
+    {
+      "week": "10",
+      "repository": "kim-kihoon/Jungle_Week10_Team2",
+      "url": "https://github.com/kim-kihoon/Jungle_Week10_Team2",
+      "visibility": "public",
+      "ref": "main",
+      "commit": "af7c585f0b58eb404a86b6c6d24558dfb091f7f6",
+      "commit_url": "https://github.com/kim-kihoon/Jungle_Week10_Team2/commit/af7c585f0b58eb404a86b6c6d24558dfb091f7f6"
+    },
+    {
+      "week": "10",
+      "repository": "DDing-Ho/Jungle_Week10_Team2",
+      "url": "https://github.com/DDing-Ho/Jungle_Week10_Team2",
+      "visibility": "public",
+      "ref": "main",
+      "commit": "e30f09348923a36193a867310f239fc3ef30aabb",
+      "commit_url": "https://github.com/DDing-Ho/Jungle_Week10_Team2/commit/e30f09348923a36193a867310f239fc3ef30aabb"
+    },
+    {
+      "week": "11",
+      "repository": "keonwookang0914/Jungle_Week11_Team4",
+      "url": "https://github.com/keonwookang0914/Jungle_Week11_Team4",
+      "visibility": "public",
+      "ref": "main",
+      "commit": "aba046b5bdecd4d5ec4dec40f05cb0cc92f899cb",
+      "commit_url": "https://github.com/keonwookang0914/Jungle_Week11_Team4/commit/aba046b5bdecd4d5ec4dec40f05cb0cc92f899cb"
+    },
+    {
+      "week": "12",
+      "repository": "DDing-Ho/Jungle_Week12_Team8",
+      "url": "https://github.com/DDing-Ho/Jungle_Week12_Team8",
+      "visibility": "public",
+      "ref": "main",
+      "commit": "394e0fd69076814e5eb1481feafecc48276fb88d",
+      "commit_url": "https://github.com/DDing-Ho/Jungle_Week12_Team8/commit/394e0fd69076814e5eb1481feafecc48276fb88d"
+    },
+    {
+      "week": "13",
+      "repository": "puter2712git/Jungle_Week13_Team3",
+      "url": "https://github.com/puter2712git/Jungle_Week13_Team3",
+      "visibility": "public",
+      "ref": "main",
+      "commit": "bfd7c08951dcc78d2687c15f5d9c760dad5564da",
+      "commit_url": "https://github.com/puter2712git/Jungle_Week13_Team3/commit/bfd7c08951dcc78d2687c15f5d9c760dad5564da"
+    },
+    {
+      "week": "14",
+      "repository": "puter2712git/Jungle_Week14_Team2",
+      "url": "https://github.com/puter2712git/Jungle_Week14_Team2",
+      "visibility": "public",
+      "ref": "main",
+      "commit": "da1f8960cd3a03a1a1bd18e95599831f00f112db",
+      "commit_url": "https://github.com/puter2712git/Jungle_Week14_Team2/commit/da1f8960cd3a03a1a1bd18e95599831f00f112db"
+    }
+  ]
+}
