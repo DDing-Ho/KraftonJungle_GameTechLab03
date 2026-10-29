@@ -20,11 +20,25 @@ DirectX 기반의 피카츄 배구 게임을 제작한 팀 프로젝트입니다
 
 ## 내 기여
 
-`DDing-Ho`가 작성한 기능·수정 커밋을 연결했습니다. 위의 핵심 내용은 팀 프로젝트의 범위이며, 아래 항목은 그중 작성자 이력으로 확인되는 작업입니다.
+텍스처·사운드 리소스 관리와 게임 상태에 따른 UI·배경 동작을 담당했습니다. 아래 설명은 `DDing-Ho` 작성 커밋의 실제 변경 내용을 기준으로 정리한 개인 작업입니다.
 
-- Texture2D와 ResourceManager 구조 추가 — [4db5f27](https://github.com/DDing-Ho/KraftonJungle3_Week1_Team5/commit/4db5f27747ebbabf91c9b4d1da765ecbf9f4adf4)
-- SoundManager 구현 — [d485baf](https://github.com/DDing-Ho/KraftonJungle3_Week1_Team5/commit/d485bafd157577b3273ff049de0bb88d4ffe4f5c)
-- 게임 UI 추가와 버그 수정 — [ebbc4d0](https://github.com/DDing-Ho/KraftonJungle3_Week1_Team5/commit/ebbc4d0f88b6e69c9e301cd5faa28cc4aeac96ba)
+### 텍스처 캐시와 엔진 자원 관리 구조
+
+텍스처의 생성·셰이더 바인딩·해제를 `UTexture2D`로 분리하고, `UResourceManager`에서 파일 경로를 키로 사용하는 캐시를 구현했습니다. 같은 경로를 다시 요청하면 기존 객체를 반환하고, 관리자가 `unique_ptr`로 소유하도록 구성했습니다. 렌더러·리소스 매니저·씬 매니저의 초기화와 해제는 `UEngine`에서 순서대로 처리해, 게임 앱이 개별 자원의 수명 관리를 직접 처리하던 책임을 나눴습니다.
+
+근거: [리소스 구조 추가 커밋](https://github.com/DDing-Ho/KraftonJungle3_Week1_Team5/commit/4db5f27747ebbabf91c9b4d1da765ecbf9f4adf4) · [UResourceManager.cpp](https://github.com/DDing-Ho/KraftonJungle3_Week1_Team5/blob/4db5f27747ebbabf91c9b4d1da765ecbf9f4adf4/KraftonJungle3_Week1_Team5/UResourceManager.cpp)
+
+### FMOD 사운드 재생과 실패·종료 경로 정리
+
+BGM·반복음·효과음이 사용하는 재생 흐름을 `StartSound`로 모으고, 채널을 일시 정지 상태로 만든 뒤 반복 모드와 볼륨을 설정하고 재생하도록 정리했습니다. 고정 채널과 동적으로 반환하는 채널을 구분해 추적하고, 재생 실패·정지·전체 종료 시 채널 참조를 정리했습니다. 사운드 파일 로딩이나 FMOD 초기화가 실패하면 생성한 자원을 해제하도록 보완해, 정상 재생뿐 아니라 실패 이후의 상태도 관리했습니다.
+
+근거: [SoundManager 개선 커밋](https://github.com/DDing-Ho/KraftonJungle3_Week1_Team5/commit/d485bafd157577b3273ff049de0bb88d4ffe4f5c) · [USoundManager.cpp](https://github.com/DDing-Ho/KraftonJungle3_Week1_Team5/blob/d485bafd157577b3273ff049de0bb88d4ffe4f5c/KraftonJungle3_Week1_Team5/USoundManager.cpp)
+
+### 경기 상태와 연결한 종료 UI·배경 애니메이션
+
+게임 종료 상태에서 결과 안내 이미지를 표시하고, 크기를 보간해 등장하는 UI 애니메이션을 추가했습니다. 득점 시에는 구름 애니메이션에도 감속된 시간을 적용하고, 경기 종료 후에는 구름이 계속 갱신되도록 별도 업데이트 경로를 두었습니다. 게임 오브젝트의 진행을 멈추는 처리와 배경·안내 UI의 갱신을 구분해, 상태 전환에서 발생하던 시각적 불일치를 수정했습니다.
+
+근거: [종료 UI·애니메이션 수정 커밋](https://github.com/DDing-Ho/KraftonJungle3_Week1_Team5/commit/ebbc4d0f88b6e69c9e301cd5faa28cc4aeac96ba) · [UMainGameScene.cpp](https://github.com/DDing-Ho/KraftonJungle3_Week1_Team5/blob/ebbc4d0f88b6e69c9e301cd5faa28cc4aeac96ba/KraftonJungle3_Week1_Team5/UMainGameScene.cpp)
 
 ## 문서와 실행 자료
 

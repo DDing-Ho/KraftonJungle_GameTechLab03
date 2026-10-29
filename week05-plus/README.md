@@ -21,12 +21,31 @@
 
 ## 내 기여
 
-`DDing-Ho`가 작성한 기능·수정 커밋을 연결했습니다. 위의 핵심 내용은 팀 프로젝트의 범위이며, 아래 항목은 그중 작성자 이력으로 확인되는 작업입니다.
+에디터에서 액터를 조립하고, 편집한 상태를 PIE 실행으로 연결하는 부분을 담당했습니다. 아래 내용은 CaptainTangerine 원본의 `DDing-Ho` 작성 커밋과 실제 변경 파일을 기준으로 정리했습니다.
 
-- Add Component와 프로퍼티 편집 개선 — [4869fee](https://github.com/CaptainTangerine/KraftonJungle3_Week5Plus_Team8/commit/4869fee76bc4d873bf059bb73fd1c694556d97ce)
-- PlayerStart 방향 화살표 표시 — [fea3533](https://github.com/CaptainTangerine/KraftonJungle3_Week5Plus_Team8/commit/fea35338e9a73408a773dbe3d86f29fcfe4749b8)
-- MovementComponent 추가와 PlayerStart 선택 복구 — [5eec2e6](https://github.com/CaptainTangerine/KraftonJungle3_Week5Plus_Team8/commit/5eec2e6b35d54d3e92e406fd6ed0c4007638763f)
-- 회전 계산과 씬 설정 조정 — [6ea3aa7](https://github.com/CaptainTangerine/KraftonJungle3_Week5Plus_Team8/commit/6ea3aa74aba379bad428c919ee8889e18a70cb04)
+### 1. 클래스 등록 정보를 활용한 Add Component와 속성 편집
+
+액터에 컴포넌트를 추가하는 작업을 에디터 안에서 처리할 수 있도록 Add Component 메뉴를 구현했습니다. `UClass`에 등록된 컴포넌트 클래스를 모아 표시 이름으로 정렬하고, 검색어 필터와 기본 클래스 제외 조건을 적용했습니다. 컴포넌트의 정확한 클래스 조회와 씬 로드 후 부모 UUID를 이용한 연결 복원도 함께 정리해, UI에서 추가한 컴포넌트와 저장된 계층 구조를 다루는 흐름을 연결했습니다.
+
+근거: [Add Component·프로퍼티 편집 커밋](https://github.com/CaptainTangerine/KraftonJungle3_Week5Plus_Team8/commit/4869fee76bc4d873bf059bb73fd1c694556d97ce) · [PropertyWindow.cpp](https://github.com/CaptainTangerine/KraftonJungle3_Week5Plus_Team8/blob/4869fee76bc4d873bf059bb73fd1c694556d97ce/Editor/Source/UI/PropertyWindow.cpp)
+
+### 2. PlayerStart의 시작 방향 시각화와 컴포넌트 복원
+
+배치한 PlayerStart가 어느 방향을 바라보는지 확인할 수 있도록 선분 메시 기반의 `ArrowComponent`를 추가했습니다. 화살표와 빌보드의 생성·부착을 공통 초기화 함수로 묶고, 씬을 불러온 뒤에도 시각화 컴포넌트를 다시 구성하도록 처리했습니다. 후속 작업에서는 로드된 컴포넌트의 Owner를 액터로 다시 설정해, PlayerStart 선택에 필요한 소유 관계를 복구했습니다.
+
+근거: [방향 화살표 추가](https://github.com/CaptainTangerine/KraftonJungle3_Week5Plus_Team8/commit/fea35338e9a73408a773dbe3d86f29fcfe4749b8) · [선택 복구](https://github.com/CaptainTangerine/KraftonJungle3_Week5Plus_Team8/commit/5eec2e6b35d54d3e92e406fd6ed0c4007638763f) · [PlayerStart.cpp](https://github.com/CaptainTangerine/KraftonJungle3_Week5Plus_Team8/blob/fea35338e9a73408a773dbe3d86f29fcfe4749b8/Engine/Source/Actor/PlayerStart.cpp)
+
+### 3. 편집 상태와 실행 상태를 구분한 MovementComponent
+
+액터에 반복 이동을 부여하는 `MovementComponent`를 구현하고, 활성 여부·진폭·속도를 프로퍼티 창에서 조절하도록 연결했습니다. 이동은 Game·PIE 월드에서만 수행하고, 시작 높이를 기준으로 사인파 이동을 계산해 편집 중인 액터 위치와 실행 중의 움직임을 구분했습니다. 설정은 직렬화하되 경과 시간 같은 런타임 상태는 로드·복제 시 초기화하도록 처리했습니다.
+
+근거: [MovementComponent 추가](https://github.com/CaptainTangerine/KraftonJungle3_Week5Plus_Team8/commit/5eec2e6b35d54d3e92e406fd6ed0c4007638763f) · [MovementComponent.cpp](https://github.com/CaptainTangerine/KraftonJungle3_Week5Plus_Team8/blob/5eec2e6b35d54d3e92e406fd6ed0c4007638763f/Engine/Source/Component/MovementComponent.cpp)
+
+### 4. 배치 방향과 PIE 카메라 시작 방향의 일치
+
+PIE 카메라 회전을 PlayerStart의 월드 forward 축에서 계산하도록 바꿔, 시작 위치와 방향을 같은 월드 기준으로 가져오도록 정리했습니다. 정규화한 방향 벡터로 pitch·yaw를 구하고, 쿼터니언의 Rotator 변환도 정규화된 축과 직교 기저를 사용하는 방식으로 수정했습니다. 에디터 배치 결과가 실행 시작 카메라에 반영되는 경로와 엔진의 회전 변환을 함께 점검한 작업입니다.
+
+근거: [회전 계산 수정](https://github.com/CaptainTangerine/KraftonJungle3_Week5Plus_Team8/commit/6ea3aa74aba379bad428c919ee8889e18a70cb04) · [EditorEngine.cpp](https://github.com/CaptainTangerine/KraftonJungle3_Week5Plus_Team8/blob/6ea3aa74aba379bad428c919ee8889e18a70cb04/Editor/Source/EditorEngine.cpp)
 
 ## 문서와 실행 자료
 
