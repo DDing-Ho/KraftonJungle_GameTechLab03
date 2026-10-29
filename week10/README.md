@@ -9,7 +9,7 @@ FBX 데이터를 엔진의 메시·머티리얼 에셋으로 변환하고, 에�
 | 저장소 | 공개 범위 | 참조 버전 |
 | --- | --- | --- |
 | [kim-kihoon/Jungle_Week10_Team2](https://github.com/kim-kihoon/Jungle_Week10_Team2) | 공개 | [af7c585](https://github.com/kim-kihoon/Jungle_Week10_Team2/tree/af7c585f0b58eb404a86b6c6d24558dfb091f7f6) |
-| [DDing-Ho/Jungle_Week10_Team2](https://github.com/DDing-Ho/Jungle_Week10_Team2) | 공개 | [e30f093](https://github.com/DDing-Ho/Jungle_Week10_Team2/tree/e30f09348923a36193a867310f239fc3ef30aabb) |
+| [DDing-Ho-Archive/Jungle_Week10_Team2](https://github.com/DDing-Ho-Archive/Jungle_Week10_Team2) | 공개 | [e30f093](https://github.com/DDing-Ho-Archive/Jungle_Week10_Team2/tree/e30f09348923a36193a867310f239fc3ef30aabb) |
 
 참조 버전은 2026-10-29에 확인한 원본 `main` 브랜치의 커밋입니다. 비공개 원본은 접근 권한이 있는 계정으로 열 수 있습니다.
 
@@ -56,6 +56,6 @@ OBJ·MTL 파싱을 에디터 importer로 이동하고, 런타임은 BIN 메시�
 - [BuildEditorRelease.bat](https://github.com/kim-kihoon/Jungle_Week10_Team2/blob/af7c585f0b58eb404a86b6c6d24558dfb091f7f6/BuildEditorRelease.bat)
 - [ReleaseBuild.bat](https://github.com/kim-kihoon/Jungle_Week10_Team2/blob/af7c585f0b58eb404a86b6c6d24558dfb091f7f6/ReleaseBuild.bat)
 
-kim-kihoon 저장소에는 2026-05-13의 작성자 커밋이 확인됩니다. DDing-Ho 저장소에는 2026-05-08까지의 초기 FBX 작업이 남아 있어 두 원본을 모두 연결했습니다.
+kim-kihoon 저장소에는 2026-05-13의 작성자 커밋이 확인됩니다. DDing-Ho-Archive로 이전한 저장소에는 2026-05-08까지의 초기 FBX 작업이 남아 있어 두 원본을 모두 연결했습니다.
 
 빌드 환경과 의존성은 원본 문서·프로젝트 파일을 참고하세요. 이 목차 저장소에는 과제의 소스 코드나 실행 에셋을 복사하지 않았습니다.
